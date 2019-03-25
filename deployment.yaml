@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubernetes-homework
+  labels:
+    app: kubernetes-homework
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kubernetes-homework
+  template:
+    metadata:
+      labels:
+        app: kubernetes-homework
+    spec:
+      containers:
+      - name: kubernetes-homework
+        image: vmaletsky/homeworkapp:v1
+        ports:
+        - containerPort: 81

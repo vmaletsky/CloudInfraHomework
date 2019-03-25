@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    run: kubernetes-homework
+  name: kubernetes-homework
+  selfLink: /api/v1/namespaces/default/services/kubernetes-homework
+
+spec:
+  selector:
+    app:  kubernetes-homework
+  type: NodePort
+  ports:
+    - port: 81
+      targetPort: 81
+      protocol: TCP

@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    test: kubernetes-homework
+  name: liveness-http
+spec:
+  containers:
+    - name: kubernetes-homework
+      image: vmaletsky/homeworkapp:v1
+      livenessProbe:
+        httpGet:
+          path: /health
+          port: 81
+        initialDelaySeconds: 5
+        periodSeconds: 5
+      readinessProbe:
+        httpGet:
+          path: /ready
+          port: 81
+        initialDelaySeconds: 5
+        periodSeconds: 5
+
