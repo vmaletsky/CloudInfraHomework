@@ -100,3 +100,19 @@ If we want to check its status at any time:
 ```bash
 kubectl describe pod liveness-http
 ```
+
+## Memory scaling
+
+First, we need to install Vertical Pod Autoscaler as described [here](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler#install-command).
+
+After that, execute:
+
+```bash
+kubectl create -f vpa.yaml
+```
+
+Check if VPA was created and is running:
+
+```bash
+kubectl get vpa homework-vpa --output yaml
+```
