@@ -1,6 +1,6 @@
 # Readme
 
-This repository contains a simple Python http server which responds with a Fibonacci number on GET request. 
+This repository contains a simple Python http server which responds to GET request with a Fibonacci number. 
 The calculation is VERY inefficient, CPU and memory consuming. Also you can find the dockerfile to build a docker image and bash scripts for kubernetes deployment.
 
 ## Docker image
